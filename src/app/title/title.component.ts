@@ -11,5 +11,5 @@ export class TitleComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+title= "Calculateur LSPD";
 }
