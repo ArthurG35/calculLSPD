@@ -7,6 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
+  bookList = [
+    {
+      name: 'San Francisco'
+    },
+    {
+      name: 'New York'
+    },
+    {
+      name: 'Seattle'
+    },
+    {
+      name: 'Los Angeles'
+    },
+    {
+      name: 'Chicago'
+    },
+    {
+      name: 'Detroit'
+    }
+];
+
   constructor() { }
 
   ngOnInit(): void {
