@@ -1,8 +1,28 @@
-<app-input-name></app-input-name>
-<div ng-app="myApp" ng-controller="myCtrl">
-    <input [(ngModel)]="data.name" class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." />
-    <datalist id="datalistOptions">
-    <option *ngFor="let list of list" value="{{ list.name }}"></option>
-  </datalist>
-    <p>{{ data.name }}</p>
-</div>
+<form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+    <div class="identity">
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">
+        <fa-icon [icon]="faUser"></fa-icon>
+      </span>
+            <input type="text" name="first" ngModel required #first="ngModel" class="form-control" placeholder="Nom" aria-label="nom" aria-describedby="addon-wrapping" />
+        </div>
+        <div class="input-group flex-nowrap">
+            <span class="input-group-text" id="addon-wrapping">
+        <fa-icon [icon]="faUser"></fa-icon>
+      </span>
+            <input type="text" name="last" ngModel required #last="ngModel" class="form-control" placeholder="Prénom" aria-label="prenom" aria-describedby="addon-wrapping" />
+        </div>
+    </div>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <input *ngFor="let input of input" [(ngModel)]="data.name" class="form-control group-list" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." />
+        <datalist id="datalistOptions">
+      <option *ngFor="let list of list" value="{{ list.name }}"></option>
+    </datalist>
+        <p>{{ data.name }}</p>
+    </div>
+</form>
+
+<p>First name value: {{ first.value }}</p>
+<p>First name valid: {{ first.valid }}</p>
+<p>Form value: {{ f.value | json }}</p>
+<p>Form valid: {{ f.valid }}</p>

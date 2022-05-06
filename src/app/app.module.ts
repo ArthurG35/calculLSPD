@@ -7,16 +7,10 @@ import { TitleComponent } from './title/title.component';
 import { ListComponent } from './list/list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { InputNameComponent } from './input-name/input-name.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    TitleComponent,
-    ListComponent,
-    InputNameComponent,
-  ],
+  declarations: [AppComponent, TitleComponent, ListComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

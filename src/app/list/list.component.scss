@@ -1,4 +1,13 @@
-input {
+.identity {
+    display: flex;
+    justify-content: center;
+    .flex-nowrap {
+        width: calc(25% - 30px);
+        margin: 0 30px;
+    }
+}
+
+.group-list {
     width: 50%;
     margin: 10px auto;
 }
