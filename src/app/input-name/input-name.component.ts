@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
+import { faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-input-name',
   templateUrl: './input-name.component.html',
-  styleUrls: ['./input-name.component.scss']
+  styleUrls: ['./input-name.component.scss'],
 })
 export class InputNameComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
-  }
-
+  faUser = faUser;
 }

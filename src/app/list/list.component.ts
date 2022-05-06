@@ -1,36 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { LIST } from '../mock-list';
+import { AppData } from '../appdata';
 
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+  styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
+  list = LIST;
+  data = new AppData('');
+  constructor() {}
 
-  list = [
-    {
-      name: 'San Francisco'
-    },
-    {
-      name: 'New York'
-    },
-    {
-      name: 'Seattle'
-    },
-    {
-      name: 'Los Angeles'
-    },
-    {
-      name: 'Chicago'
-    },
-    {
-      name: 'Detroit'
-    }
-];
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
