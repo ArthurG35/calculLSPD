@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  bookList = [
+  list = [
     {
       name: 'San Francisco'
     },
