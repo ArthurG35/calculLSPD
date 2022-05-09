@@ -1,14 +1,14 @@
 import { List } from './list';
 
 export const LIST: List[] = [
-  { name: 'Dr Nice' },
-  { name: 'Narco' },
-  { name: 'Bombasto' },
-  { name: 'Celeritas' },
-  { name: 'Magneta' },
-  { name: 'RubberMan' },
-  { name: 'Dynama' },
-  { name: 'Dr IQ' },
-  { name: 'Magma' },
-  { name: 'Tornado' },
+  { name: 'Dr Nice', id: 1 },
+  { name: 'Narco', id: 2 },
+  { name: 'Bombasto', id: 3 },
+  { name: 'Celeritas', id: 4 },
+  { name: 'Magneta', id: 5 },
+  { name: 'RubberMan', id: 6 },
+  { name: 'Dynama', id: 7 },
+  { name: 'Dr IQ', id: 8 },
+  { name: 'Magma', id: 9 },
+  { name: 'Tornado', id: 10 },
 ];
