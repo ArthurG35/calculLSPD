@@ -14,17 +14,12 @@
         </div>
     </div>
     <div ng-app="myApp" ng-controller="myCtrl">
-        <input ngModel required #input="ngModel" name="input" class="form-control group-list" list="datalistOptions" id="exampleDataList" placeholder="Type to search..." />
+        <input ngModel required #input1="ngModel" (change)="checkExiste(input1.value, 'input1')" name="input1" class="form-control group-list" list="datalistOptions" id="input1" placeholder="Type to search..." />
+        <input ngModel required #input2="ngModel" (change)="checkExiste(input2.value, 'input2')" name="input2" class="form-control group-list" list="datalistOptions" id="input2" placeholder="Type to search..." />
         <datalist id="datalistOptions">
-      <option *ngFor="let list of list" value="{{ list.libelle }}"></option>
+      <option *ngFor="let item of list" value="{{ item.libelle }}"></option>
     </datalist>
     </div>
 </form>
-
-<p>First name value: {{ first.value }}</p>
-<p>last name value: {{ last.value }}</p>
-<p>libelle value: {{ input.value }}</p>
-<p>First name value: {{ first.value }}</p>
-<p>First name valid: {{ first.valid }}</p>
+<p>{{ input1.value }}</p>
 <p>Form value: {{ f.value | json }}</p>
-<p>Form valid: {{ f.valid }}</p>
