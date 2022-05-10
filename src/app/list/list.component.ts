@@ -16,19 +16,10 @@ export class ListComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  input: input[];
-
-  constructor() {
-    this.input = [{ id: 1, champs: '' }];
-  }
+  constructor() {}
 
   onSubmit(f: NgForm) {
     console.log(f.value); // { first: '', last: '' }
     console.log(f.valid); // false
   }
-}
-
-interface input {
-  id: number;
-  champs: string;
 }

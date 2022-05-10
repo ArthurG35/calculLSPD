@@ -1,5 +1,6 @@
 export interface List {
-    name: string;
-  }
-  
-  
+  libelle: string;
+  amende: number;
+  multiplie: boolean;
+  by: number;
+}
