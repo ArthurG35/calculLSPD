@@ -14,15 +14,15 @@
         </div>
     </div>
     <div ng-app="myApp" ng-controller="myCtrl">
-        <input ngModel required #input1="ngModel" (change)="checkExiste(input1.value, 'input1')" name="input1" class="form-control group-list" list="datalistOptions" id="input1" placeholder="{{ vide }}" />
-        <input ngModel required #input2="ngModel" (change)="checkExiste(input2.value, 'input2')" name="input2" class="form-control group-list" list="datalistOptions" id="input2" placeholder="{{ vide }}" />
-        <input ngModel required #input3="ngModel" (change)="checkExiste(input3.value, 'input3')" name="input3" class="form-control group-list" list="datalistOptions" id="input3" placeholder="{{ vide }}" />
-        <input ngModel required #input4="ngModel" (change)="checkExiste(input4.value, 'input4')" name="input4" class="form-control group-list" list="datalistOptions" id="input4" placeholder="{{ vide }}" />
-        <input ngModel required #input5="ngModel" (change)="checkExiste(input5.value, 'input5')" name="input5" class="form-control group-list" list="datalistOptions" id="input5" placeholder="{{ vide }}" />
-        <input ngModel required #input6="ngModel" (change)="checkExiste(input6.value, 'input6')" name="input6" class="form-control group-list" list="datalistOptions" id="input6" placeholder="{{ vide }}" />
-        <input ngModel required #input7="ngModel" (change)="checkExiste(input7.value, 'input7')" name="input7" class="form-control group-list" list="datalistOptions" id="input7" placeholder="{{ vide }}" />
-        <input ngModel required #input8="ngModel" (change)="checkExiste(input8.value, 'input8')" name="input8" class="form-control group-list" list="datalistOptions" id="input8" placeholder="{{ vide }}" />
-        <input ngModel required #input9="ngModel" (change)="checkExiste(input9.value, 'input9')" name="input9" class="form-control group-list" list="datalistOptions" id="input9" placeholder="{{ vide }}" />
+        <input ngModel required #input1="ngModel" (change)="checkExiste(input1.value, 'input1')" name="input1" class="form-control group-list" list="datalistOptions" id="input1" placeholder="{{ inputPlaceholder }}" />
+        <input ngModel required #input2="ngModel" (change)="checkExiste(input2.value, 'input2')" name="input2" class="form-control group-list" list="datalistOptions" id="input2" placeholder="{{ inputPlaceholder }}" />
+        <input ngModel required #input3="ngModel" (change)="checkExiste(input3.value, 'input3')" name="input3" class="form-control group-list" list="datalistOptions" id="input3" placeholder="{{ inputPlaceholder }}" />
+        <input ngModel required #input4="ngModel" (change)="checkExiste(input4.value, 'input4')" name="input4" class="form-control group-list" list="datalistOptions" id="input4" placeholder="{{ inputPlaceholder }}" />
+        <input ngModel required #input5="ngModel" (change)="checkExiste(input5.value, 'input5')" name="input5" class="form-control group-list" list="datalistOptions" id="input5" placeholder="{{ inputPlaceholder }}" />
+        <input ngModel required #input6="ngModel" (change)="checkExiste(input6.value, 'input6')" name="input6" class="form-control group-list" list="datalistOptions" id="input6" placeholder="{{ inputPlaceholder }}" />
+        <input ngModel required #input7="ngModel" (change)="checkExiste(input7.value, 'input7')" name="input7" class="form-control group-list" list="datalistOptions" id="input7" placeholder="{{ inputPlaceholder }}" />
+        <input ngModel required #input8="ngModel" (change)="checkExiste(input8.value, 'input8')" name="input8" class="form-control group-list" list="datalistOptions" id="input8" placeholder="{{ inputPlaceholder }}" />
+        <input ngModel required #input9="ngModel" (change)="checkExiste(input9.value, 'input9')" name="input9" class="form-control group-list" list="datalistOptions" id="input9" placeholder="{{ inputPlaceholder }}" />
         <datalist id="datalistOptions">
       <option *ngFor="let item of list" value="{{ item.libelle }}"></option>
     </datalist>

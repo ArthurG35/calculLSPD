@@ -13,7 +13,7 @@ export class ListComponent implements OnInit {
   list = LIST;
   data = new AppData('');
   faUser = faUser;
-  vide: String = 'Vide...';
+  inputPlaceholder: String = 'Vide...';
 
   ngOnInit(): void {}
 
