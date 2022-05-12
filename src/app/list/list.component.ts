@@ -3,7 +3,6 @@ import { LIST } from '../mock-list';
 import { AppData } from '../AppData';
 import { NgForm } from '@angular/forms';
 import { faUser } from '@fortawesome/free-solid-svg-icons';
-import { List } from '../list';
 
 @Component({
   selector: 'app-list',
@@ -14,31 +13,49 @@ export class ListComponent implements OnInit {
   list = LIST;
   data = new AppData('');
   faUser = faUser;
+  vide: String = 'Vide...';
 
   ngOnInit(): void {}
 
   constructor() {}
 
   onSubmit(f: NgForm) {
-    console.log(f.value); // { first: '', last: '' }
-    console.log(f.valid); // false
+    console.log(f.value);
+  }
+
+  numSequence(n: number): Array<number> {
+    return Array(n);
+  }
+
+  resetInput(input: HTMLElement) {
+    input.style.setProperty('background-color', 'white');
+    input.style.setProperty('color', 'black');
+    input.style.setProperty('font-weight', 'normal');
+  }
+
+  warningInput(input: HTMLElement) {
+    input.style.setProperty('background-color', 'red');
+    input.style.setProperty('color', 'white');
+    input.style.setProperty('font-weight', 'bold');
   }
 
   checkExiste(chaine: string, input: string) {
-    var box = document.getElementById(input);
-    console.log(chaine);
-    if (chaine !== '' && chaine !== 'vide') {
-      for (let i = 0; i < this.list.length; i++) {
-        const element = this.list[i];
-        if (chaine === element.libelle) {
-          console.log('Position: ' + i);
-          return;
+    let inputSelect = document.getElementById(input);
+    if (inputSelect != null) {
+      this.resetInput(inputSelect);
+      if (chaine !== '' && chaine !== 'Vide...') {
+        for (let i = 0; i < this.list.length; i++) {
+          const element = this.list[i];
+          if (chaine === element.libelle) {
+            console.log('Position: ' + i);
+            return;
+          }
         }
+      } else {
+        (inputSelect as HTMLInputElement).value = '';
+        return;
       }
-      if (box != null) {
-        box.style.setProperty('background-color', 'red');
-        box.style.setProperty('color', 'white');
-      }
+      this.warningInput(inputSelect);
     }
   }
 }

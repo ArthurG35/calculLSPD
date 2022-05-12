@@ -2,7 +2,7 @@ import { List } from './list';
 
 export const LIST: List[] = [
   {
-    libelle: 'Vide',
+    libelle: 'Vide...',
     amende: 0,
     multiplie: false,
     by: 0,
